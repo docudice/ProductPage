@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+
+</head>
+<body>
+  
+<header>
+  <span>
+    <h2>sneackers</h2>
+  <div class="menu">
+    <ul class="menuChoisse">
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+</ul>
+  </div>
+  </span>
+  <div class="EspaceMembre">
+    <a href="#" class="Panier">
+      <img class="PanierLogo" src="images/icon-cart.svg" width="35px" height="35px" alt="Logo Geeks and the City"/>
+      <div class="PanierArea"><h3>card &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</h3><div id ="PanierAreaPlace"></div></div>
+    </a>
+   <a href="#" class="ProfilPicture">
+    <img class="PanierLogo" src="images/image-avatar.png" width="50px" height="50px" alt="Logo Geeks and the City"/>
+ </a>
+   
+  </div>
+</header>
+
+<section class="contenu">
+  <div class="imageProduct">
+    <input type="button" id="Zoom" onclick="ZoomLabelForPicture()">
+    <label for="Zoom">
+<img src="images/image-product-1.jpg" id="ShowsPicture" for="Zoom" name="image"/>
+</label>
+<form class="imageChoise">
+
+  <input type="radio" name="image" id="swosPicture1" checked/> 
+  <label for="swosPicture1" class="ShowsPicture1" onclick="ChangePicture1('images/image-product-1.jpg')"></label>
+
+  <input type="radio" name="image" id="swosPicture2" /> 
+  <label for="swosPicture2" class="ShowsPicture2" onclick="ChangePicture1('images/image-product-2.jpg')"></label>
+
+  <input type="radio" name="image" id="swosPicture3"/> 
+  <label for="swosPicture3" class="ShowsPicture3" onclick="ChangePicture1('images/image-product-3.jpg')"></label>
+
+  <input type="radio" name="image" id="swosPicture4"/> 
+  <label for="swosPicture4" class="ShowsPicture4"onclick="ChangePicture1('images/image-product-4.jpg')"></label>
+
+</form>
+</div>
+<div class="TextToPicture">
+  <h2>Sneaker Company</h2>
+ 
+  <h1>Fall Limited Edition Sneakers</h1>
+  
+  <p> These low-profile sneakers are your perfect casual wear companion. Featuring a 
+    durable rubber outer sole, they’ll withstand everything the weather can offer.
+  </p>
+  <div class="NewPrix"><div id="prix">$125.00</div><div id="promo">50%</div></div><br>
+    <div id="before"> &nbsp;$250.00&nbsp;</div>
+  <br>
+  <div class="ajoutpartie">
+  <div class="boutonaddition">
+    <button class="SuppOne" onclick="LESS(1)">-</button><input type="number" value=0 id="NumberSection"><button class="AddOne" onclick="ADD(1)">+</button>
+    
+  </div>
+    <button class="addPanier" onclick="AddInPanier()"><img src="images/icon-cart-white.svg" alt="carte"/>Add to cart</button>
+</div>
+</div>
+</section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Melvyn</a>.
+  </div>
+
+
+
+
+  <div id="modalPage">
+    <input type="button" id="clossModal" onclick="CloseModalFenetre()"/>
+    <div id="ImageZoomArea">
+      <div class="ScrollArea">
+      
+     
+      <img src="images/image-product-1.jpg" id="ShowsPicture2" name="image"/>
+      
+      </div>
+    <div class="imageToScroll">
+      <form class="imageChoise">
+
+        <input type="radio" name="image" id="swosPictureArea1" checked/> 
+        <label for="swosPictureArea1" class="ShowsPicture1" onclick="ChangePicture2('images/image-product-1.jpg')"></label>
+      
+        <input type="radio" name="image" id="swosPictureArea2" /> 
+        <label for="swosPictureArea2" class="ShowsPicture2" onclick="ChangePicture2('images/image-product-2.jpg')"></label>
+      
+        <input type="radio" name="image" id="swosPictureArea3"/> 
+        <label for="swosPictureArea3" class="ShowsPicture3" onclick="ChangePicture2('images/image-product-3.jpg')"></label>
+      
+        <input type="radio" name="image" id="swosPictureArea4"/> 
+        <label for="swosPictureArea4" class="ShowsPicture4" onclick="ChangePicture2('images/image-product-4.jpg')"></label>
+      
+      </form>
+    </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="apli.js"></script>
+</body>
+
+</html>
